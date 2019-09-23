@@ -1,7 +1,7 @@
 # ALEXA SDK #
 
 ## Task
-Install Alexa SDK on the Raspberry pi4.  This is particularly challenging since the 
+Install Alexa Voice Service (AVS) on the Raspberry pi4.  This is particularly challenging since the 
 SDK is not supported on the Raspberry pi4 due to it running on the Buster OS.
 
 ## Step 1 (Install Operating System)
@@ -33,7 +33,10 @@ SSH pi@theIpAddressYourPi
 ```
 After hitting enter you will also need to provide the password of your Raspberry Pi
 
-## Installing Alexa SDK
+## Installing Alexa Voice Service
+As previosly stated atleast as of today 9/24/2019, Amazon is not currently supporting the Aamazon Voice Services on the Raspberry Pi4, this has to do with the fact that 
+the new Pi4 runs on the Buster Os, and not Stretch as the previous Pi.  The Voice Service still can be installed on the newer OS using the AVS SDK (Software Development Kit), however
+some things need to be modified.
 
 
 
