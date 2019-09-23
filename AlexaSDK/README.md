@@ -13,10 +13,17 @@ I like to use my laptop to program my Raspberry Pi.  It however is possible to
 do all programming locally.  This can be done from the terminal and or from the desktop.  If you want to do this from the terminal type
 `
 Enter sudo raspi-config in a terminal window
+`
+`
 Select Interfacing Options
+`
+`
 Navigate to and select SSH
+``
 Choose Yes
+``
 Select Ok
+``
 Choose Finish
 `
 
