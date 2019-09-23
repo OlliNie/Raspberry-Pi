@@ -21,8 +21,19 @@ Select Ok
 Choose Finish
 ```
 
+Now from the terminal of your Raspberry Pi type
+```
+ifconfig
+```
+This will give you the IP address of your Raspberry Pi.
 
-Select `Interfacing Options`
-Now that SSH is enabled, in the console of the Raspberry Pi type ifconfig to find the ip address of your Raspberry Pi.
+Finally you can SSH (remotely access your Raspberry Pi) from you laptop terminal by typing the following into terminal
+```
+SSH pi@theIpAddressYourPi
+```
+After hitting enter you will also need to provide the password of your Raspberry Pi
+
+## Installing Alexa SDK
+
 
 
