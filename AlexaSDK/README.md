@@ -12,9 +12,9 @@ https://www.raspberrypi.org/downloads/raspbian/
 I like to use my laptop to program my Raspberry Pi.  It however is possible to 
 do all programming locally.  This can be done from the terminal and or from the desktop.  If you want to do this from the terminal type
 
-< /br>
+<br />
 Enter `sudo raspi-config` in a terminal window
-< /br>
+<br />
 Select `Interfacing Options`
 
 Now that SSH is enabled, in the console of the Raspberry Pi type ifconfig to find the ip address of your Raspberry Pi.
