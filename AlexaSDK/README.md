@@ -13,7 +13,11 @@ I like to use my laptop to program my Raspberry Pi.  It however is possible to
 do all programming locally.  This can be done from the terminal and or from the desktop.  If you want to do this from the terminal type
 
 <br />
-Enter `sudo raspi-config` in a terminal window
+Enter
+`
+sudo raspi-config
+`
+in a terminal window
 <br />
 Select `Interfacing Options`
 
