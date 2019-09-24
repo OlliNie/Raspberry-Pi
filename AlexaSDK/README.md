@@ -52,3 +52,10 @@ wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install
 ```
 wget is used to retrieve content from the web using HTTP/HTTPS protocol.  Now that we have these files we still need to get a config file.  In order to do this follow the link 
 listed above to get the config.json file from AVS, however DO NOT follow the next setep "Build the AVS Device SDK" listed on the Amazon website since this is where we are going to run into compatibility issues when running on the Buster OS. 
+
+Now we will need to modify several files.  I personally like using nano to modify files through the terminal, however there are plenty of other options.  In either case lets first
+modify the pi.sh file.  I am going to do this from the command line 
+```
+nano pi.sh
+```
+Within pi.sh look for libssl1.0-dev and change it tolibssl1.1, also change alsolibgcrypt20-dev to libgcrypt20 and save your modifications.
