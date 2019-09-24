@@ -44,5 +44,9 @@ sudo apt-get upgrade
 ```
 sudo is short for super user do, and gives you abilities you wouldn't otherwise have, for example in order to run the apt-get command you need sudo.  Apt-get performs installations and is the preferred method of managing software with Debian based Linux distributions such as Buster OS.  Finally the upgrade does exactly what you would expect it to do, it upgrades your current packages to the newest version.
 
-
-
+Now we are ready to start installing the AVS SDK. Go to the location in which you wish to store everything related to connecting to Alexa, and  run the following commands.
+```
+wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/setup.sh \
+wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/genConfig.sh \
+wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/pi.sh
+```
