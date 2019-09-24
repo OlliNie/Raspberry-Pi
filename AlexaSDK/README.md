@@ -35,8 +35,10 @@ After hitting enter you will also need to provide the password of your Raspberry
 
 ## Installing Alexa Voice Service
 As previosly stated atleast as of today 9/24/2019, Amazon is not currently supporting the Aamazon Voice Services on the Raspberry Pi4, this has to do with the fact that 
-the new Pi4 runs on the Buster Os, and not Stretch as the previous Pi.  The Voice Service still can be installed on the newer OS using the AVS SDK (Software Development Kit), however
-some things need to be modified.
+the new Pi4 runs on the Buster OS, and not Stretch as the previous Pi.  The Voice Service still can be installed on the newer OS using the AVS SDK (Software Development Kit), however
+some things need to be modified.  To get started, lets refer to the Amazon website at https://developer.amazon.com/docs/alexa-voice-service/input-avs-credentials.html.
+
+
 
 
 
