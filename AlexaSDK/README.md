@@ -38,7 +38,11 @@ As previosly stated atleast as of today 9/24/2019, Amazon is not currently suppo
 the new Pi4 runs on the Buster OS, and not Stretch as the previous Pi.  The Voice Service still can be installed on the newer OS using the AVS SDK (Software Development Kit), however
 some things need to be modified.  To get started, lets refer to the Amazon website at https://developer.amazon.com/docs/alexa-voice-service/input-avs-credentials.html.
 
-
+Lets first make sure that we have the latest version of all the packages by entering the following command into the terminal. 
+```
+sudo apt-get upgrade
+```
+sudo is short for super user do, and gives you abilities you wouldn't otherwise have, for example in order to run the apt-get command you need sudo.  Apt-get performs installations and is the preferred method of managing software with Debian based Linux distributions such as Buster OS.  Finally the upgrade does exactly what you would expect it to do, it upgrades your current packages to the newest version.
 
 
 
