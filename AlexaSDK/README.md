@@ -50,3 +50,5 @@ wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install
 wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/genConfig.sh \
 wget https://raw.githubusercontent.com/alexa/avs-device-sdk/master/tools/Install/pi.sh
 ```
+wget is used to retrieve content from the web using HTTP/HTTPS protocol.  Now that we have these files we still need to get a config file.  In order to do this follow the link 
+listed above to get the config.json file from AVS, however DO NOT follow the next setep "Build the AVS Device SDK" listed on the Amazon website since this is where we are going to run into compatibility issues when running on the Buster OS. 
