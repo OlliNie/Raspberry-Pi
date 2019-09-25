@@ -74,3 +74,4 @@ Now we should be able to build the AVS Device SDK without any issues.
 
 ## Talking to Alexa
  
+Before we move on any further at this time it is important to make sure that both your microphone and speakers are working properly.  Without these devices you will get an error and at best you will be operating in limited functionality mode.  
