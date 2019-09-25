@@ -70,4 +70,7 @@ After the failed installation modify the CMakeLists.txt by adding the following 
 ```
 set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
 ```
-and try to build the AVS Device SDK again.
+Now we should be able to build the AVS Device SDK without any issues.
+
+## Talking to Alexa
+ 
