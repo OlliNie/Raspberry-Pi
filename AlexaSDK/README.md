@@ -65,3 +65,9 @@ Now we need to modify the CMakelists.txt file, however it only gets created when
 sudo bash setup.sh config.json [-s 1234]
 ```
 This will start the SDK build, however it will fail.  No worries now we have access to the CMakelists.txt.  We will also be modifying this file using nano.  
+
+After the failed installation modify the CMakeLists.txt by adding the following line of code right after the endif() which shoudl be on about line 8.
+```
+set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
+```
+and try to build the AVS Device SDK again.
