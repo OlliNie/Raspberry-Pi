@@ -59,3 +59,9 @@ modify the pi.sh file.  I am going to do this from the command line
 nano pi.sh
 ```
 Within pi.sh look for libssl1.0-dev and change it tolibssl1.1, also change alsolibgcrypt20-dev to libgcrypt20 and save your modifications.
+
+Now we need to modify the CMakelists.txt file, however it only gets created when you try to build the AVS Device SDK.  Make sure that your config.json file is within the same directory witht the other 3 files that we downloaded using wget.  In the terminal CD into the directory and run the following command in the terminal.
+```
+sudo bash setup.sh config.json [-s 1234]
+```
+This will start the SDK build, however it will fail.  No worries now we have access to the CMakelists.txt.  We will also be modifying this file using nano.  
