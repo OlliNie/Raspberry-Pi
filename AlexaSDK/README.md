@@ -74,4 +74,81 @@ Now we should be able to build the AVS Device SDK without any issues.
 
 ## Talking to Alexa
  
-Before we move on any further at this time it is important to make sure that both your microphone and speakers are working properly.  Without these devices you will get an error and at best you will be operating in limited functionality mode.  
+Before we move on any further at this time it is important to make sure that both your microphone and speakers are working properly.
+Without these devices you will get an error and at best you will be operating in limited functionality mode.  
+
+A good article that goes into setting up microphone and speaker on the raspberry pi is https://iotbytes.wordpress.com/connect-configure-and-test-usb-microphone-and-speaker-with-raspberry-pi/ .
+
+Now the sond setup can actually be a bit tricky since everyone has different audio devices.   This is where most of my troubles came from.   If you have sound working lets try to get a refresh token,
+and if that doesn't work, then we can further troubleshoot what is going on with the sound.
+
+# Get refresh token
+Cd into the directory that we have been working in which should be something along the lines of cd /home/pi/.  Make sure that you see a file named startsample.sh and run the following bash command.
+```
+sudo bash startsample.sh
+```
+IF all goes well, you should see a script that keeps on running that asks for autorization and a link to an AWS webite where you can do that using a unique password that shows up in the terminal.
+If somethign doesn't go right, the script will stop looking for autorization and error out.  In this case it is probably sound related.  You can check the errors and continue trouble shooting from here.
+For me I had to do additional steps which I will go into detail below.  Once you are autohrized you will be able to talk to Alexa just as if you were talking to Alexa using one of those AWS Echos.
+Refer to the AWS website for more details at https://developer.amazon.com/docs/alexa-voice-service/get-a-refresh-token.html 
+
+
+## IF you ran into sound issues, this should help.
+
+copy the following code to these locations.  You may need to create these files before adding the code listed below.  
+/home/pi/.asoundrc
+/root/.asoundrc
+/home/pi/third-party/alexa-rpi/config/asound.conf 
+
+```
+pcm.dsnooper {
+    type dsnoop
+    ipc_key 816357492
+    ipc_key_add_uid 0
+    ipc_perm 0666
+    slave {
+        pcm "hw:1,0"
+        channels 1
+    }
+}
+pcm.dmixer {
+    type dmix
+    ipc_key 1024
+    slave {
+        pcm "hw:1,0"
+        period_time 0
+        period_size 1024
+        buffer_size 8192
+        rate 44100
+    }
+
+    }
+pcm.!default {
+        type asym
+        playback.pcm {
+                type plug
+                slave.pcm "dmixer"
+        }
+        capture.pcm {
+                type plug
+                slave.pcm "dsnooper"
+        }
+}
+```
+
+## It took me some research to figure this all out, however the problem was the information was scattered all over the web, and there wasn't a single source to go to in assisting getting Raspberry Pi
+up and running on Buster.
+
+Here are all the links to that I referred to in orderto come up withthis step by step guide.
+https://github.com/alexa/avs-device-sdk/issues/1508
+https://github.com/alexa/avs-device-sdk/issues/943
+https://developer.amazon.com/docs/alexa-voice-service/input-avs-credentials.html
+https://github.com/alexa/avs-device-sdk/issues/1405
+https://github.com/alexa/avs-device-sdk/issues/1413
+https://github.com/alexa/avs-device-sdk/issues/1404
+https://github.com/alexa/avs-device-sdk/issues/743
+https://github.com/alexa/avs-device-sdk/issues/1366
+https://developer.amazon.com/docs/alexa-voice-service/set-up-raspberry-pi.html
+https://developer.amazon.com/docs/alexa-voice-service/get-a-refresh-token.html
+https://iotbytes.wordpress.com/connect-configure-and-test-usb-microphone-and-speaker-with-raspberry-pi/
+
