@@ -4,6 +4,10 @@
 Install Alexa Voice Service (AVS) on the Raspberry pi4.  This is particularly challenging since the 
 SDK is not supported on the Raspberry pi4 due to it running on the Buster OS.
 
+It took me some researc to figure this all out, and the problem was that alot of the information was scattered all around the web and not in a single location. This inspired me to create this
+write up in order to assist others get Alexa voice services running on their Raspberry Pi.
+
+
 ## Step 1 (Install Operating System)
 Install the Raspbian Buster with desktop and recommended software from 
 https://www.raspberrypi.org/downloads/raspbian/
@@ -96,9 +100,9 @@ Refer to the AWS website for more details at https://developer.amazon.com/docs/a
 ## IF you ran into sound issues, this should help.
 
 copy the following code to these locations.  You may need to create these files before adding the code listed below.  
-/home/pi/.asoundrc
-/root/.asoundrc
-/home/pi/third-party/alexa-rpi/config/asound.conf 
+* /home/pi/.asoundrc
+* /root/.asoundrc
+* /home/pi/third-party/alexa-rpi/config/asound.conf 
 
 ```
 pcm.dsnooper {
@@ -136,8 +140,11 @@ pcm.!default {
 }
 ```
 
-## It took me some research to figure this all out, however the problem was the information was scattered all over the web, and there wasn't a single source to go to in assisting getting Raspberry Pi
-up and running on Buster.
+## Additional notes
+
+If you have any issues installing Alexa onto your Raspberry Pi4 running on Buster, or if you have anything that you can add, then pleaes create a PR or create an issue! I hope this was
+helpful :)
+
 
 Here are all the links to that I referred to in orderto come up withthis step by step guide.
 * https://github.com/alexa/avs-device-sdk/issues/1508
