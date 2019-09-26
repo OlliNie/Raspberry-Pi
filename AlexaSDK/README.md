@@ -140,15 +140,15 @@ pcm.!default {
 up and running on Buster.
 
 Here are all the links to that I referred to in orderto come up withthis step by step guide.
-https://github.com/alexa/avs-device-sdk/issues/1508
-https://github.com/alexa/avs-device-sdk/issues/943
-https://developer.amazon.com/docs/alexa-voice-service/input-avs-credentials.html
-https://github.com/alexa/avs-device-sdk/issues/1405
-https://github.com/alexa/avs-device-sdk/issues/1413
-https://github.com/alexa/avs-device-sdk/issues/1404
-https://github.com/alexa/avs-device-sdk/issues/743
-https://github.com/alexa/avs-device-sdk/issues/1366
-https://developer.amazon.com/docs/alexa-voice-service/set-up-raspberry-pi.html
-https://developer.amazon.com/docs/alexa-voice-service/get-a-refresh-token.html
-https://iotbytes.wordpress.com/connect-configure-and-test-usb-microphone-and-speaker-with-raspberry-pi/
+* https://github.com/alexa/avs-device-sdk/issues/1508
+* https://github.com/alexa/avs-device-sdk/issues/943
+* https://developer.amazon.com/docs/alexa-voice-service/input-avs-credentials.html
+* https://github.com/alexa/avs-device-sdk/issues/1405
+* https://github.com/alexa/avs-device-sdk/issues/1413
+* https://github.com/alexa/avs-device-sdk/issues/1404
+* https://github.com/alexa/avs-device-sdk/issues/743
+* https://github.com/alexa/avs-device-sdk/issues/1366
+* https://developer.amazon.com/docs/alexa-voice-service/set-up-raspberry-pi.html
+* https://developer.amazon.com/docs/alexa-voice-service/get-a-refresh-token.html
+* https://iotbytes.wordpress.com/connect-configure-and-test-usb-microphone-and-speaker-with-raspberry-pi/
 
